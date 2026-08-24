@@ -1,15 +1,16 @@
 # Site settings
-title: Your Name
+title: Lorenzo Feroleto's blog
 email: you@example.com
 description: >-
-  A technical blog. Write markdown in Obsidian, push, done.
+  Collections of technical articles and thoughts.
 baseurl: "" # the subpath of your site, e.g. /blog (leave empty for user site)
 url: "https://thedevbirb.github.io"
-author: Your Name
+author: Lorenzo Feroleto
 twitter_username:
 github_username:
 
 # Build settings
+permalink: /:title/
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

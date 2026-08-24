@@ -10,6 +10,8 @@ layout: default
       {% if page.tags.size > 0 %}
       &middot; {{ page.tags | join: ", " }}
       {% endif %}
+      &middot; {{ page.content | number_of_words }} words
+      &middot; {{ page.content | number_of_words | divided_by: 200 | plus: 1 }} min read
     </p>
   </header>
 

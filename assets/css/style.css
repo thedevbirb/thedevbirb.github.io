@@ -1,20 +1,20 @@
 :root {
-  --bg: #ffffff;
-  --fg: #1a1a1a;
-  --muted: #6b7280;
-  --accent: #2563eb;
-  --border: #e5e7eb;
-  --code-bg: #f6f8fa;
+  --bg: #fdfaf5;
+  --fg: #2b2118;
+  --muted: #8a7a68;
+  --accent: #b4541a;
+  --border: #e8dccb;
+  --code-bg: #f5efe4;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0f1115;
-    --fg: #e5e7eb;
-    --muted: #9ca3af;
-    --accent: #60a5fa;
-    --border: #262b33;
-    --code-bg: #171a21;
+    --bg: #1b1a18;
+    --fg: #c9c2b8;
+    --muted: #8a837a;
+    --accent: #d98a5a;
+    --border: #302d29;
+    --code-bg: #232120;
   }
 }
 
@@ -29,7 +29,7 @@ body {
 }
 
 .wrap {
-  max-width: 42rem;
+  max-width: 60rem;
   margin: 0 auto;
   padding: 0 1.25rem;
 }
@@ -103,4 +103,78 @@ blockquote {
   color: var(--muted);
   font-size: 0.85rem;
 }
-.site-footer .wrap { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+.site-footer .wrap {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.site-footer .socials {
+  display: flex;
+  gap: 0.9rem;
+}
+.site-footer .socials a {
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.site-footer .socials a:hover { color: var(--accent); }
+
+.page-shell {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  display: flex;
+  align-items: flex-start;
+}
+.page-shell main {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+.outline {
+  flex: 0 0 13rem;
+  position: sticky;
+  top: 2rem;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  font-size: 0.9rem;
+  margin-left: 2rem
+}
+
+@media (max-width: 56rem) {
+  .page-shell { display: block; }
+  .outline { display: none; }
+}
+.outline-header {
+  margin-top: 3rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+#toc-nav ul { list-style: none; margin: 0; padding: 0; }
+#toc-nav li { margin: 0.25rem 0; }
+#toc-nav .toc-level-3 { margin-left: 1rem; }
+#toc-nav .toc-level-4 { margin-left: 2rem; }
+#toc-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  display: block;
+  padding: 0.2rem 0.5rem;
+  border-left: 2px solid transparent;
+  line-height: 1.35;
+}
+#toc-nav a:hover { color: var(--accent); }
+#toc-nav a.active {
+  color: var(--accent);
+  border-left-color: var(--accent);
+}
