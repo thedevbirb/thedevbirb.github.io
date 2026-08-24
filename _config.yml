@@ -4,7 +4,7 @@ email: you@example.com
 description: >-
   A technical blog. Write markdown in Obsidian, push, done.
 baseurl: "" # the subpath of your site, e.g. /blog (leave empty for user site)
-url: "" # e.g. https://username.github.io
+url: "https://thedevbirb.github.io"
 author: Your Name
 twitter_username:
 github_username:
